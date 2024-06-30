@@ -1,0 +1,50 @@
+body {
+  background-image: url("/src/img/studio-background-concept-abstract-empty-light-gradient-purple-studio-room-background-product.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+   
+}
+* {
+  font-family: monospace;
+}
+.mover {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 12px;
+  border-radius: 20px;
+  height: 290px;
+  width: 200px;
+  background-image: radial-gradient(circle at 50% 120.71%, #a46cdf 0, #60479f 25%, #1f1f59 50%, #00001b 75%, #000000 100%);
+}
+.centrardiv {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   height: 100vh;
+  }
+  input{
+    background: transparent;
+    color: white;
+    border-radius: 10px;
+    text-align: center;
+  }
+  p{
+    font-size: 12px;
+    color:white;
+  }
+  .moverp1{
+    margin-bottom: -5px;
+    
+  }
+  .moverp2{
+    margin: 1px;
+  }
+.moverprin{
+    margin: -2px;
+
+}
+
+  

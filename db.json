@@ -10,21 +10,23 @@
       "name": "Jane Smith",
       "email": "jane@example.com"
     },
-
-    
     {
       "id": "6e42",
       "user": "kenneth",
       "email": "kennvilchez@gmail.com",
       "password": "1234"
+    },
+    {
+      "id": "411b",
+      "email": "cken102@gmail.com",
+      "password": "1234"
     }
-  ], 
+  ],
   "productos": [
     {
       "id": "1",
-      "name": "John Doe",
+      "name": "Electrodomestico",
       "price": 2000
     }
   ]
 }
-

@@ -1,4 +1,4 @@
-export let postData = async (username, email, password) => {
+export let postData = async (email, password) => {
     try {
       let response = await fetch("http://localhost:3001/users", {
         method: "POST",
@@ -8,7 +8,6 @@ export let postData = async (username, email, password) => {
           "Content-Type": "application/json",
         },
         body: JSON.stringify({
-            user: username,
             email: email,
             password: password
 

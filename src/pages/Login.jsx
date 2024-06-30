@@ -1,10 +1,11 @@
 import { useState } from "react";
 import { getData } from "../services/FGet";
 import { useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
+ import "../css/Logeo.css"
 
 const Login = () => {
-  const [data, setData] = useState();
-  const [username, setUsername] = useState();
+  const [data, setData] = useState();  
   const [email, setEmail] = useState();
   const [password, setPassword] = useState();
   const navigate = useNavigate()
@@ -22,7 +23,7 @@ const Login = () => {
       const user = data.find((user)=> user.email == email);
       // console.log("usuario", user)
       if (user.password == password){
-        console.log("usuario autenticado")
+       alert("usuario autenticado")
         navigate("/Home")  // navegamos hacia home
       }else {
         console.log("contrasena invalida")
@@ -32,26 +33,30 @@ const Login = () => {
   }
 
   return (
-    <div>
-      <input
-        type="text"
-        value={username}
-        placeholder="Escriba un usuario"
-        onChange={(e) => setUsername(e.target.value)}
-      />
+    <div >
+      <div className="centrardiv">
+      <div className="mover">
+       <p className="moverprin">Bienvenido a PlasmaTech</p>
+       <p>Introduza sus datos</p>
       <input
         type="text"
         value={email}
-        placeholder="Escriba un email"
+        placeholder="Email"
         onChange={(e) => setEmail(e.target.value)}
       />
       <input
         type="text"
         value={password}
-        placeholder="Escriba una contraasena"
+        placeholder="Contraseña"
         onChange={(e) => setPassword(e.target.value)}
       />
-      <button onClick={inicioSesion}>inicio sesion</button>
+      <button onClick={inicioSesion}>Inicio Sesion</button>
+      <p className="moverp1"> Registrate aca</p>
+      <p className="moverp2">👇👇👇</p>
+      <Link to="/Register"> 
+      <button>Registro</button></Link>
+      </div>
+      </div>
     </div>
   );
 };

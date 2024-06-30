@@ -1,6 +1,7 @@
 const apiUrl = "http://localhost:3001/users";
 export let getData = async () => {
   try {
+     
     let response = await fetch(apiUrl, {
       method: "GET",
       mode: "cors",
