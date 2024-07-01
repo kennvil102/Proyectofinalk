@@ -5,13 +5,13 @@ import Rutas from './routes/Rutas'
 import Button from 'react-bootstrap/Button';
 import 'bootstrap/dist/css/bootstrap.min.css';  
 
+
 function App() {
    
 
   return (
     <>
-
-
+     
       <Rutas/>
     </>
   )

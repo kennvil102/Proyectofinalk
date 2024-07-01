@@ -1,0 +1,35 @@
+.Posicion {
+  background-color: rgb(255, 255, 255);
+  border-radius: 2px;
+  display: flex;
+  justify-content: center;
+
+  background-size:;
+}
+ul {
+  display: flex;
+  justify-content: space-around;
+  width: 700px;
+  list-style: none;
+  color: white;
+  font-size: larger;
+  border-radius: 12px;
+}
+ul li a:hover{
+    color: rgb(248, 228, 1);
+}
+
+ul li a {
+  text-decoration: none;
+  color: rgb(26, 7, 75);
+}
+.banner{
+   
+        width: 100%;
+        height: 100px; /* Ajusta la altura según tus necesidades */
+        background-image: url('../img/banner.jpeg');
+        background-size: cover; /* Ajusta la imagen para cubrir todo el contenedor */
+        background-position: center; /* Centra la imagen */
+        background-repeat: no-repeat; /* Evita que la imagen se repita */
+     
+}

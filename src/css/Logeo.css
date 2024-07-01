@@ -18,6 +18,9 @@ body {
   height: 290px;
   width: 200px;
   background-image: radial-gradient(circle at 50% 120.71%, #a46cdf 0, #60479f 25%, #1f1f59 50%, #00001b 75%, #000000 100%);
+  box-shadow:inset 5px 5px 10px 4px #1f1f59 ;
+
+
 }
 .centrardiv {
     display: flex;
@@ -50,11 +53,21 @@ body {
   background-color:#1f1f59;
   border-radius: 20px;
   color: white;
+  
 }
+.btncolor:hover{
+  filter: brightness(40%);
+  transition: filter .25s;
+}
+
 .btncolor2{
   background-color:#60479f;
   border-radius: 20px;
   color: white;
+}
+.btncolor2:hover{
+  filter: brightness(40%);
+  transition: filter .25s;
 }
 
   

@@ -45,12 +45,20 @@
       "id": "70d3",
       "email": "kenneth102@gmail.com",
       "password": "1234"
+    },
+    {
+      "id": "0644",
+      "email": "daniel@gmail.com",
+      "password": "1234"
+    },
+    {
+      "id": "b5e4"
     }
   ],
   "productos": [
     {
       "id": "1",
-      "name": "Electrodomestico",
+      "name": "Tv",
       "price": 2000
     }
   ]
