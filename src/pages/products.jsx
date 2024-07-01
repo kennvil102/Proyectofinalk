@@ -7,7 +7,7 @@ const Products = () => {
   return <div>
 
 
-  </div>;
+  </div>; 
 };
 
 export default Products;
