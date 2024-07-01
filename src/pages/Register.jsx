@@ -1,6 +1,7 @@
  
 import React, {useState} from "react"
-import { postData } from "../services/FPost"
+import { postData } from "../services/Fetch-LG-RG/FPost"
+import "../css/Registro.css"
  
 const Register = () => {
    
@@ -17,11 +18,15 @@ const Register = () => {
   }
   return (
     <div> {/* value valor del user onchange e evento del onchange, target seria todo el input */}
-       
-      <input type="text" value={email} placeholder="Escriba un email" onChange={(e)=>setEmail (e.target.value)}/>
-      <input type="text" value={password} placeholder="Escriba una contraasena" onChange={(e)=>setPassword (e.target.value) } />
+    <div className="movereldi"> 
+    <div className="moverR">
+
+      <p className="movertex">Introduzca un Email y una Contraseña para Registrarse</p> 
+      <input type="text" value={email} placeholder="Email" onChange={(e)=>setEmail (e.target.value)}/>
+      <input type="text" value={password} placeholder="Contraseña" onChange={(e)=>setPassword (e.target.value) } />
       <button onClick={registro}>Registro</button>
-      
+      </div>
+      </div>
     </div>
      
   )

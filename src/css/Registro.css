@@ -1,0 +1,25 @@
+ .moverR{
+    display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 25px;
+  border-radius: 20px;
+  height: 250px;
+  width: 200px;
+  background-image: radial-gradient(circle at 50% 120.71%, #a46cdf 0, #60479f 25%, #1f1f59 50%, #00001b 75%, #000000 100%);
+ }
+ .movereldi{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+
+ }
+ .movertex{
+    margin: 9px;
+    margin-top: 20px;
+    padding: -12px;
+    margin-right: -30px;
+
+ }

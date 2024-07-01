@@ -46,5 +46,15 @@ body {
     margin: -2px;
 
 }
+.btncolor{
+  background-color:#1f1f59;
+  border-radius: 20px;
+  color: white;
+}
+.btncolor2{
+  background-color:#60479f;
+  border-radius: 20px;
+  color: white;
+}
 
   
