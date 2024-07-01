@@ -1,18 +1,28 @@
  
 import React, {useState} from "react"
 import { postData } from "../services/Fetch-LG-RG/FPost"
+import { useNavigate } from "react-router-dom";
 import "../css/Registro.css"
  
 const Register = () => {
    
   const [email,setEmail]= useState()
   const [password,setPassword]=useState()
+  const navigate = useNavigate();
 
   function  registro() {
     async function datos() {
     let regis = await postData(email,password)
+    if (regis && regis.email && regis.password) {
+      alert("Usuario Registrado exitosamente")
+      navigate("/Login")
+      
+    }else{
+      alert("error no se registro")
+    }
     }
     datos()
+  
   
     
   }
