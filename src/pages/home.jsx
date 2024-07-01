@@ -8,7 +8,7 @@ const Home = () => {
     <div>
      <div className="banner"></div>
       <div className="Posicion">
-        <ul >
+        <ul className="moverlins" >
           <li><Link to ="/Home">Home </Link></li>
           <li><Link to ="/Products">Products </Link></li>
           <li><Link to ="/Contact"> Contact </Link></li>
