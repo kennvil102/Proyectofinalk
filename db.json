@@ -53,6 +53,20 @@
     },
     {
       "id": "b5e4"
+    },
+    {
+      "id": "6b41",
+      "email": "kenneth",
+      "password": "kennvilchez@gmail.com"
+    },
+    {
+      "id": "631d"
+    },
+    {
+      "id": "bc4d"
+    },
+    {
+      "id": "a481"
     }
   ],
   "productos": [
@@ -60,6 +74,23 @@
       "id": "1",
       "name": "Tv",
       "price": 2000
+    }
+  ],
+  "Contactanos": [
+    {
+      "id": "1",
+      "nombre": "John",
+      "correo": "john2@example.com",
+      "mensaje": "Hello, I have a question about your product."
+    },
+    {
+      "id": "8f22"
+    },
+    {
+      "id": "c556"
+    },
+    {
+      "id": "99fd"
     }
   ]
 }

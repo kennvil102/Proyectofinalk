@@ -11,7 +11,10 @@ const Register = () => {
   const navigate = useNavigate();
 
   function  registro() {
-    async function datos() {
+    async function datos() { {/* si regis contiene los datos enviados con el posdata
+      luego con el if va validar los datos ya sea que se haya 
+      registrado con un email o password y con navigate se va redirigir
+      a la pagina principal*/}
     let regis = await postData(email,password)
     if (regis && regis.email && regis.password) {
       alert("Usuario Registrado exitosamente")
