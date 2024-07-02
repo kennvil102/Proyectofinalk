@@ -1,6 +1,6 @@
 export let postData = async (nombre, correo, mensaje) => {
     try {
-      const response = await fetch("http://localhost:3000/Contactanos", {
+      const response = await fetch("http://localhost:3001/Contactanos/", {
         method: "POST",
         headers: {
           "Content-Type": "application/json"

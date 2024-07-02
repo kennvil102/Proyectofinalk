@@ -1,4 +1,4 @@
-const apiUrl = "http://localhost:3001/Contactanos";
+const apiUrl = "http://localhost:3001/Contactanos/";
 export let getData = async () => {
   try {
      

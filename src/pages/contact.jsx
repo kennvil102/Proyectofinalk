@@ -10,16 +10,13 @@ const Contact = () => {
 
   const enviarForm = async()=>{
     const result = await postData(nombre,correo,mensaje)
-    if (result){
-      setStatus("");
-      setNombre("");
-      setCorreo("");
-      setMensaje("");
+    if (result && result.nombre && result.correo && result.mensaje){
+      alert("Se envio el mensaje")
 
     }else {
-      setStatus("No se envio el mensaje")
+      alert("no se envio")
     }
-  };
+  };  
 
 
   return (
@@ -47,7 +44,9 @@ const Contact = () => {
           onChange={(e) => setMensaje(e.target.value)}
         />
         <button onClick={enviarForm}>Enviar</button>
-        {status && <p>{status}</p>}
+        
+
+      
       </div>
     </div>
       
