@@ -6,11 +6,14 @@ import Products from "../pages/Products";
 import Contact from "../pages/Contact";
 import App from "../App";
 import AboutUs from "../pages/AboutUs";
+import AuthProvider from "../Contexts/AuthProvider";
+
  
 
 const Rutas = () => {
   return (
     <>
+
       <Routes>
         <Route path="/" element={<Login />} />
         <Route path="/Login" element={<Login />} />
@@ -19,9 +22,8 @@ const Rutas = () => {
         <Route path="/Products" element={<Products/>} />
         <Route path="/AboutUs" element={<AboutUs/>} />
         <Route path="/Contact" element={<Contact/>} />
-
-        
       </Routes>
+
     </>
   );
 };

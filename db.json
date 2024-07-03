@@ -71,10 +71,18 @@
   ],
   "productos": [
     {
-      "id": "1",
-      "name": "Tv",
-      "price": 2000
+      "id": "b1c5",
+      "nom": "Celular",
+      "price": "1000",
+      "imagen": "https://ejemplo.com/imagen3.jpg"
+    },
+    {
+      "id": "cc5b",
+      "nom": "TV",
+      "price": "100",
+      "imagen": "https://images.samsung.com/is/image/samsung/latin_PL42C430A1XZP_001_Front?$330_330_JPG$"
     }
+   
   ],
   "Contactanos": [
     {
