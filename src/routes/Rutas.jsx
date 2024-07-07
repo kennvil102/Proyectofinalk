@@ -6,7 +6,7 @@ import Products from "../pages/Products";
 import Contact from "../pages/Contact";
 import App from "../App";
 import AboutUs from "../pages/AboutUs";
-import AuthProvider from "../Contexts/AuthProvider";
+ 
 
  
 

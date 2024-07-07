@@ -1,42 +1,96 @@
- 
+* {
+  color: white;
+}
+
 .contact-form {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  animation: fadeIn 2s ease-out;
+}
+
+.form-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-image: radial-gradient(circle at 50% 120.71%, #2b1048 0, #3f1b9c 25%, #1f1f59 50%, #00001b 75%, #000000 100%);
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  color: white;
+  margin-bottom:700px;
+}
+
+.form-container input,
+.form-container textarea {
+  margin: 10px 0;
+  padding: 10px;
+  width: 100%;
+  border: 1px solid #eceaea;
+  border-radius: 4px;
+}
+
+.form-container button {
+  margin: 10px 0;
+  padding: 10px;
+  width: 100%;
+  background-color: #007bff;
+  color: #2c1e1e;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.form-container button:hover {
+  background-color: #d1e20c;
+}
+
+.ordicons {
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  background-color: #0a1742;
+  width: 300px;
+  gap: 20px;
+  position: absolute;
+  top: 400px;
+  left: 20px; /* Ajuste a la izquierda para evitar superposiciones */
+  border-radius: 20px;
+  height: 190px;
+  background-image: radial-gradient(circle at 50% 120.71%, #a46cdf 0, #60479f 25%, #1f1f59 50%, #00001b 75%, #000000 100%);
+  box-shadow: inset 5px 5px 10px 4px #1f1f59;
+  text-align: center;
+}
+
+.moverdivsito {
+  position: absolute;
+  left: 200px;
+  bottom: 800px;
+  animation: fadeIn 2s ease-out;
+}
+
+.ordenartesto {
+  background-image: radial-gradient(circle at 50% 120.71%, #13091e 0, #201738 25%, #1f1f59 50%, #00001b 75%, #000000 100%);
+  box-shadow: inset 5px 5px 10px 4px #1f1f59;
+  border-radius: 22px;
+  text-align: center;
+  width: 330px;
+  animation: fadeIn 2s ease-out;
+}
+.movertesto{
+  position: relative;
+  left: 215px;
+  top: 100px;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
   }
-  
-  .form-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background-color: #0a1742;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
-  
-  .form-container input,
-  .form-container textarea {
-    margin: 10px 0;
-    padding: 10px;
-    width: 100%;
-    border: 1px solid #eceaea;
-    border-radius: 4px;
-  }
-  
-  .form-container button {
-    margin: 10px 0;
-    padding: 10px;
-    width: 100%;
-    background-color: #007bff;
-    color: #2c1e1e;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-  }
-  
-  .form-container button:hover {
-    background-color: #0056b3;
-  }
-  
+}
