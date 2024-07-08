@@ -14,17 +14,17 @@
   
   #mission {
     top: 150px;
-    left: 150px;
+    left: 50px;
   }
   
   #vision {
     top: 150px;
-    left: 750px;
+    left: 550px;
   }
   
   #values {
     top: 150px;
-    left: 1350px;
+    left: 1150px;
   }
   
   .accordion-toggle {
