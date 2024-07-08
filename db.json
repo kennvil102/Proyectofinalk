@@ -67,6 +67,12 @@
     },
     {
       "id": "a481"
+    },
+    {
+      "id": "42c9"
+    },
+    {
+      "id": "41c5"
     }
   ],
   "productos": [
@@ -76,7 +82,6 @@
       "price": "1000",
       "imagen": "https://ejemplo.com/imagen3.jpg"
     }
-    
   ],
   "Contactanos": [
     {

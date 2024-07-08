@@ -1,16 +1,21 @@
 import React, { useState } from "react";
 import { postData } from "../services/Fetch-Contact/FPost-Contact";
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faMapMarkerAlt, faEnvelope } from '@fortawesome/free-solid-svg-icons'; // Iconos de ubicación y correo
-import { faFacebook, faWhatsapp } from '@fortawesome/free-brands-svg-icons'; // Icono de WhatsApp
-import "../css/Contac.css"; // Asegúrate de que la ruta al archivo CSS sea correcta
-import { text } from "@fortawesome/fontawesome-svg-core";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faMapMarkerAlt, faEnvelope } from "@fortawesome/free-solid-svg-icons"; // Iconos de ubicación y correo
+import {
+  faFacebook,
+  faWhatsapp,
+  faTwitter,
+  faInstagram
+} from "@fortawesome/free-brands-svg-icons"; // Icono de WhatsApp
+
+import "../css/Contac.css";
 
 const Contact = () => {
-  const [nombre, setNombre] = useState('');
-  const [correo, setCorreo] = useState('');
-  const [mensaje, setMensaje] = useState('');
-  const [status, setStatus] = useState('');
+  const [nombre, setNombre] = useState("");
+  const [correo, setCorreo] = useState("");
+  const [mensaje, setMensaje] = useState("");
+  const [status, setStatus] = useState("");
 
   const enviarForm = async () => {
     const result = await postData(nombre, correo, mensaje);
@@ -22,31 +27,30 @@ const Contact = () => {
   };
 
   return (
-     <div>
-      <div className="moverdivsito"> 
+    <div>
       <div className="ordicons">
-      <h2 className="textoAnimado">Contacto</h2>
-      <span> <FontAwesomeIcon icon={faMapMarkerAlt} /> Dirección: 153 Santa Ana</span>
-      <span> <FontAwesomeIcon icon={faWhatsapp}/> Celular: +506 633-452-22</span>
-      <span> <FontAwesomeIcon icon={faEnvelope} /> Email: 1234@plastech.com</span>
-     </div>
-     </div>
-     <div className="movertesto">
-     <div className="ordenartesto">
-      <h2>
-        CONTACTANOS <br />
-        <br />
-        Si deseas consultar mayor Informacion Sobre Nuestros
-        servicios o tienes alguna duda al respecto, No dudes
-        en Mandarnos un mensaje. Uno de Nuestros asesores se pondra en contacto
-        contigo.
-      </h2>
-       
-     </div>
-     </div>
-                       
-       
-
+        <h2 className="textoAnimado">CONTACTO</h2>
+        <span>
+          <FontAwesomeIcon icon={faMapMarkerAlt} /> Dirección: 153 Santa Ana   
+        </span>
+        <span>
+          <FontAwesomeIcon icon={faWhatsapp} /> Celular: +506 633-452-22
+        </span>
+        <span>
+          <FontAwesomeIcon icon={faEnvelope} /> Email: 1234@plasmatech.com
+        </span>
+      </div>
+      <div className="movertesto">
+        <div className="ordenartesto">
+          <h2>
+           ESCRIBENOS <br />
+            <br />
+            Si deseas consultar mayor Informacion Sobre Nuestros servicios o
+            tienes alguna duda al respecto, No dudes en Mandarnos un mensaje.
+            Uno de Nuestros asesores se pondra en contacto contigo.
+          </h2>
+        </div>
+      </div>
       <div className="contact-form">
         <div className="form-container">
           <p>Ponte en contacto con nosotros</p>
@@ -71,6 +75,37 @@ const Contact = () => {
           />
           <button onClick={enviarForm}>Enviar</button>
         </div>
+      </div>
+      <div className="moverredes">
+        <ul className="social-links">
+          <li>
+            <a
+              href="https://twitter.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <FontAwesomeIcon icon={faTwitter} />
+            </a>
+          </li>
+          <li>
+            <a
+              href="https://www.facebook.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <FontAwesomeIcon icon={faFacebook} />
+            </a>
+          </li>
+          <li>
+            <a
+              href="https://www.instagram.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <FontAwesomeIcon icon={faInstagram} />
+            </a>
+          </li>
+        </ul>
       </div>
     </div>
   );
