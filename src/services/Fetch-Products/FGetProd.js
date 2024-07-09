@@ -1,8 +1,9 @@
+// services/productService.js
 const apiUrl = "http://localhost:3001/productos";
-export let getData = async () => {
+
+export const getData = async () => {
   try {
-     
-    let response = await fetch(apiUrl, {
+    const response = await fetch(apiUrl, {
       method: "GET",
       mode: "cors",
       credentials: "same-origin",
@@ -10,10 +11,15 @@ export let getData = async () => {
         "Content-Type": "application/json",
       },
     });
-    let data = await response.json();
+
+    if (!response.ok) {
+      throw new Error(`HTTP error! Status: ${response.status}`);
+    }
+
+    const data = await response.json();
     return data;
-  } catch(e) {
-    console.log(e);
-    return null;
+  } catch (error) {
+    console.error("Error fetching data:", error);
+    throw error; // Propagate the error for handling in the component
   }
-}
+};

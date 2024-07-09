@@ -1,19 +1,14 @@
-// services/Fetch-Products/FPostProd.js
+// services/Fetch-Products/FDelProd.js
 const apiUrl = "http://localhost:3001/productos";
 
-export const postData = async (nombre, precio, imagen) => {
+export const deleteProduct = async (id) => {
   try {
-    const response = await fetch(apiUrl, {
-      method: "POST",
+    const response = await fetch(`${apiUrl}/${id}`, {
+      method: "DELETE",
       mode: "cors",
       headers: {
         "Content-Type": "application/json",
       },
-      body: JSON.stringify({
-        nombre,
-        precio,
-        imagen,
-      }),
     });
 
     if (!response.ok) {
@@ -23,7 +18,7 @@ export const postData = async (nombre, precio, imagen) => {
     const data = await response.json();
     return data;
   } catch (error) {
-    console.error("Error posting data:", error);
+    console.error("Error deleting data:", error);
     throw error; // Propagate the error for handling in the component
   }
 };

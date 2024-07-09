@@ -75,14 +75,7 @@
       "id": "41c5"
     }
   ],
-  "productos": [
-    {
-      "id": "b1c5",
-      "nom": "Celular",
-      "price": "1000",
-      "imagen": "https://ejemplo.com/imagen3.jpg"
-    }
-  ],
+  "productos": [],
   "Contactanos": [
     {
       "id": "1",
@@ -92,19 +85,19 @@
     },
     {
       "id": "e948",
-      "nombre": "kenneth ",
+      "nombre": "kenneth",
       "correo": "ke@gmail.com",
       "mensaje": "hola"
     },
     {
       "id": "37f8",
-      "nombre": "kenneth ",
+      "nombre": "kenneth",
       "correo": "ke@gmail.com",
       "mensaje": "hola"
     },
     {
       "id": "12ad",
-      "nombre": "kenneth ",
+      "nombre": "kenneth",
       "correo": "ke@gmail.com",
       "mensaje": "hola"
     },

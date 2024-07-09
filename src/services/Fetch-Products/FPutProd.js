@@ -1,10 +1,10 @@
-// services/Fetch-Products/FPostProd.js
+// services/Fetch-Products/FPutProd.js
 const apiUrl = "http://localhost:3001/productos";
 
-export const postData = async (nombre, precio, imagen) => {
+export const updateProduct = async (id, nombre, precio, imagen) => {
   try {
-    const response = await fetch(apiUrl, {
-      method: "POST",
+    const response = await fetch(`${apiUrl}/${id}`, {
+      method: "PUT",
       mode: "cors",
       headers: {
         "Content-Type": "application/json",
@@ -23,7 +23,7 @@ export const postData = async (nombre, precio, imagen) => {
     const data = await response.json();
     return data;
   } catch (error) {
-    console.error("Error posting data:", error);
+    console.error("Error updating data:", error);
     throw error; // Propagate the error for handling in the component
   }
 };
