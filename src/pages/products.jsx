@@ -129,8 +129,8 @@ const Products = () => {
             <p>Precio: ${prod.precio}</p>
             <img src={prod.imagen} alt={prod.nombre} />
             <div>
-              <Button variant="danger" onClick={() => handleDelete(prod.id)}>Eliminar</Button>
-              <Button variant="info" onClick={() => handleUpdate(prod.id, prompt("Nuevo nombre:"), prompt("Nuevo precio:"), prod.imagen)}>Actualizar</Button>
+              <Button variant="danger" onClick={() => handleDelete(prod.id)}>❌</Button>
+              <Button variant="info" onClick={() => handleUpdate(prod.id, prompt("Nuevo nombre:"), prompt("Nuevo precio:"), prod.imagen)}>🆙</Button>
             </div>
           </div>
         ))}

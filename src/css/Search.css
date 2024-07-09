@@ -2,15 +2,18 @@
 .search-container {
     display: flex;
     align-items: center;
-    margin-bottom: 10px; /* Ajusta según necesites */
+    margin-top: 10px;
+    margin-bottom: 20px; /* Ajusta según necesites */
+    margin-left: 550px;
 }
 
 .search-input {
     padding: 10px;
     font-size: 16px;
     border: 1px solid #ffffff;
+    background-color:rgb(174, 170, 173);
     border-radius: 4px;
-    margin-right: 22px; /* Espacio entre el input y el botón */
+    margin-right: 52px; /* Espacio entre el input y el botón */
     width: 200px; /* Ajusta el ancho según necesites */
     height: 48px;
 }
@@ -18,7 +21,7 @@
 .search-button {
     padding: 10px 20px;
     font-size: 16px;
-    background-color: #007bff; /* Color de fondo del botón */
+    background-color: #58d619; /* Color de fondo del botón */
     color: rgb(95, 3, 75); /* Color del texto del botón */
     border: none;
     border-radius: 4px;

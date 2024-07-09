@@ -73,9 +73,27 @@
     },
     {
       "id": "41c5"
+    },
+    {
+      "id": "b3ea",
+      "email": "n@gmail.com",
+      "password": "1234"
     }
   ],
-  "productos": [],
+  "productos": [
+    {
+      "id": "31f5",
+      "nombre": "",
+      "precio": "",
+      "imagen": ""
+    },
+    {
+      "id": "63c9",
+      "nombre": "",
+      "precio": "",
+      "imagen": ""
+    }
+  ],
   "Contactanos": [
     {
       "id": "1",
