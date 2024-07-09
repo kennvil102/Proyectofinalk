@@ -4,19 +4,22 @@ import { getData } from "../services/Fetch-Products/FGetProd";
 import { postData } from "../services/Fetch-Products/FPostProd";
 import { updateProduct } from "../services/Fetch-Products/FPutProd";
 import { deleteProduct } from "../services/Fetch-Products/FDelProd";
-import "../css/Products.css"; // Importar el archivo de estilos
+import Search from "../components/Search"; 
+import "../css/Products.css"; 
 
 const Products = () => {
   const [productos, setProductos] = useState([]);
   const [nombre, setNombre] = useState('');
   const [precio, setPrecio] = useState('');
   const [imagen, setImagen] = useState('');
+  const [FiltroProd, setFiltroProd] = useState([]);
 
   useEffect(() => {
     const fetchProductos = async () => {
       try {
         const data = await getData();
         setProductos(data);
+        setFiltroProd(data);
       } catch (error) {
         console.error('Error fetching products:', error);
       }
@@ -25,12 +28,20 @@ const Products = () => {
     fetchProductos();
   }, []);
 
+  const handleSearch = (barraBusqueda) => {
+    const filtered = productos.filter(product => 
+      product.nombre.toLowerCase().includes(barraBusqueda.toLowerCase())
+    );
+    setFiltroProd(filtered);
+  };
+
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
       const result = await postData(nombre, precio, imagen);
       if (result) {
         setProductos([...productos, result]);
+        setFiltroProd([...productos, result]);
         setNombre('');
         setPrecio('');
         setImagen('');
@@ -46,9 +57,10 @@ const Products = () => {
       if (result) {
         const updatedProducts = productos.filter(prod => prod.id !== id);
         setProductos(updatedProducts);
+        setFiltroProd(updatedProducts);
       }
     } catch (error) {
-      console.error('Error deleting product:', error);
+      console.error('Error', error);
     }
   };
 
@@ -68,6 +80,7 @@ const Products = () => {
           return prod;
         });
         setProductos(updatedProducts);
+        setFiltroProd(updatedProducts);
       }
     } catch (error) {
       console.error('Error updating product:', error);
@@ -76,6 +89,7 @@ const Products = () => {
 
   return (
     <div>
+      <Search onSearch={handleSearch} /> 
       <form onSubmit={handleSubmit}>
         <input
           type="text"
@@ -98,14 +112,13 @@ const Products = () => {
         <button type="submit">Añadir producto</button>
       </form>
       <div className="productos-container">
-        {productos.map(prod => (
+        {FiltroProd.map(prod => (
           <div key={prod.id} className="producto">
             <h2>{prod.nombre}</h2>
             <p>Precio: ${prod.precio}</p>
             <img src={prod.imagen} alt={prod.nombre} />
             <div>
               <button onClick={() => handleDelete(prod.id)}>Eliminar</button>
-              {/* Aquí se permite la actualización con nuevos valores */}
               <button onClick={() => handleUpdate(prod.id, prompt("Nuevo nombre:"), prompt("Nuevo precio:"), prod.imagen)}>Actualizar</button>
             </div>
           </div>
