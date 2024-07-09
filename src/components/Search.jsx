@@ -1,28 +1,28 @@
-import { useState } from "react"
+import React, { useState } from "react";
+import { Button } from "react-bootstrap";
+import "../css/Search.css"
 
 const Search = ({ onSearch }) => {
-    const [barraBusqueda, setBarraBusqueda] = useState(""); 
-    // inicializa el estado barraBusqueda con una cadena vacia
+    const [barraBusqueda, setBarraBusqueda] = useState("");
 
     const handleSearch = () => {
-        onSearch(barraBusqueda); 
-        // llama a la funcion onSearch pasando el valor actual de barraBusqueda
+        onSearch(barraBusqueda);
     };
 
     return (
-        <div>
-            <input 
-                type="text" 
-                value={barraBusqueda} 
-                onChange={(e) => setBarraBusqueda(e.target.value)} 
-                placeholder="Buscar productos" 
+        <div className="search-container">
+            <input
+                className="search-input"
+                type="text"
+                value={barraBusqueda}
+                onChange={(e) => setBarraBusqueda(e.target.value)}
+                placeholder="Buscar productos"
             />
-            {/* input controlado que actualiza barraBusqueda con el texto ingresado */}
-
-            <button onClick={handleSearch}>Buscar</button>
-            {/* boton que llama a handleSearch cuando se hace clic */}
+            <button className="search-button" onClick={handleSearch}>
+                Buscar
+            </button>
         </div>
     );
-}
+};
 
 export default Search;

@@ -28,6 +28,7 @@ const Contact = () => {
 
   return (
     <div>
+      
       <div className="ordicons">
         <h2 className="textoAnimado">CONTACTO</h2>
         <span>

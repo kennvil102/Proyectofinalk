@@ -1,11 +1,11 @@
-// Products.jsx
 import React, { useState, useEffect } from "react";
 import { getData } from "../services/Fetch-Products/FGetProd";
 import { postData } from "../services/Fetch-Products/FPostProd";
 import { updateProduct } from "../services/Fetch-Products/FPutProd";
 import { deleteProduct } from "../services/Fetch-Products/FDelProd";
+import { Button, Form } from "react-bootstrap"; // Importar Button y Form de react-bootstrap
 import Search from "../components/Search"; 
-import "../css/Products.css"; 
+import "../css/Products.css"; // Importar tu archivo CSS personalizado
 
 const Products = () => {
   const [productos, setProductos] = useState([]);
@@ -47,7 +47,7 @@ const Products = () => {
         setImagen('');
       }
     } catch (error) {
-      console.error('Error adding product:', error);
+      console.error('Error ', error);
     }
   };
 
@@ -90,27 +90,38 @@ const Products = () => {
   return (
     <div>
       <Search onSearch={handleSearch} /> 
-      <form onSubmit={handleSubmit}>
-        <input
-          type="text"
-          placeholder="Nombre del producto"
-          value={nombre}
-          onChange={(e) => setNombre(e.target.value)}
-        />
-        <input
-          type="number"
-          placeholder="Precio"
-          value={precio}
-          onChange={(e) => setPrecio(e.target.value)}
-        />
-        <input
-          type="text"
-          placeholder="URL de la imagen"
-          value={imagen}
-          onChange={(e) => setImagen(e.target.value)}
-        />
-        <button type="submit">Añadir producto</button>
-      </form>
+      <Form onSubmit={handleSubmit}>
+        <Form.Group controlId="formNombre">
+          <Form.Control
+            type="text"
+            placeholder="Nombre del producto"
+            value={nombre}
+            onChange={(e) => setNombre(e.target.value)}
+            className="custom-input" // Aplica estilos CSS a los inputs
+          />
+        </Form.Group>
+        <Form.Group controlId="formPrecio">
+          <Form.Control
+            type="number"
+            placeholder="Precio"
+            value={precio}
+            onChange={(e) => setPrecio(e.target.value)}
+            className="custom-input" // Aplica estilos CSS a los inputs
+          />
+        </Form.Group>
+        <Form.Group controlId="formImagen">
+          <Form.Control
+            type="text"
+            placeholder="URL de la imagen"
+            value={imagen}
+            onChange={(e) => setImagen(e.target.value)}
+            className="custom-input" // Aplica estilos CSS a los inputs
+          />
+        </Form.Group>
+        <Button variant="primary" type="submit" className="custom-button">
+          Añadir producto
+        </Button>
+      </Form>
       <div className="productos-container">
         {FiltroProd.map(prod => (
           <div key={prod.id} className="producto">
@@ -118,8 +129,8 @@ const Products = () => {
             <p>Precio: ${prod.precio}</p>
             <img src={prod.imagen} alt={prod.nombre} />
             <div>
-              <button onClick={() => handleDelete(prod.id)}>Eliminar</button>
-              <button onClick={() => handleUpdate(prod.id, prompt("Nuevo nombre:"), prompt("Nuevo precio:"), prod.imagen)}>Actualizar</button>
+              <Button variant="danger" onClick={() => handleDelete(prod.id)}>Eliminar</Button>
+              <Button variant="info" onClick={() => handleUpdate(prod.id, prompt("Nuevo nombre:"), prompt("Nuevo precio:"), prod.imagen)}>Actualizar</Button>
             </div>
           </div>
         ))}
