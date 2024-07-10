@@ -6,12 +6,12 @@ import Home from "../pages/Home";
 import Products from "../pages/Products";
 import Contact from "../pages/Contact";
 import AboutUs from "../pages/AboutUs";
-import Main from "../pages/Main";
+import MainP from "../pages/MainP";
 
 const Rutas = () => {
   return (
     <Routes>
-      <Route path="/" element={<Main />} />
+      <Route path="/" element={<MainP />} />
       <Route path="/Login" element={<Login />} />
       <Route path="/Register" element={<Register />} />
       <Route path="/Home" element={<Home />} />
