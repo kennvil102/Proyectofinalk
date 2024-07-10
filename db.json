@@ -78,20 +78,109 @@
       "id": "b3ea",
       "email": "n@gmail.com",
       "password": "1234"
+    },
+    {
+      "id": "e7fc"
+    },
+    {
+      "id": "3dc8"
+    },
+    {
+      "id": "cc43",
+      "email": "s@gmail.com",
+      "password": "1234"
     }
   ],
   "productos": [
     {
-      "id": "31f5",
-      "nombre": "",
-      "precio": "",
-      "imagen": ""
+      "id": "6aa1",
+      "nombre": "Placa Tibia Proximal Lateral",
+      "precio": "300",
+      "imagen": "src\\img\\imgproducts\\PLACA-TIBIA-PROXIMAL-LATERAL-45-MM.jpg"
     },
     {
-      "id": "63c9",
-      "nombre": "",
-      "precio": "",
-      "imagen": ""
+      "id": "9336",
+      "nombre": "Placa Tibia Distal",
+      "precio": "280",
+      "imagen": "src\\img\\imgproducts\\PlacaDistalTibia.jpg"
+    },
+    {
+      "id": "5337",
+      "nombre": "Placa En L para Radio Distal ",
+      "precio": "100",
+      "imagen": "https://es.indianorthopaedic.com/product-large-images-webp/Placa-fixLOCK-II-en-L-para-radio-distal-2.4mm-3-orificios-en-la-cabeza-izquierda-derecha-3011.webp"
+    },
+    {
+      "id": "1e81",
+      "nombre": "Placa Radio Distal Volar",
+      "precio": "120",
+      "imagen": "https://www.eurociencia.com.ve/wp-content/uploads/2015/03/Periloc-Volar-distal-radio.jpg"
+    },
+    {
+      "id": "0eaa",
+      "nombre": "Placa Radio Distal en T",
+      "precio": "122",
+      "imagen": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQDqNJeMsV1MKFLSb5GWGy4Bsd-_zNavcDu5Q&s"
+    },
+    {
+      "id": "064b",
+      "nombre": "Placa Radio Distal Bloqueada",
+      "precio": "133",
+      "imagen": "https://cirugiaavenida.com.ar/wp-content/uploads/2020/04/2744-placa-para-radio-distal-vp-anatomica-bloq-izq-titanio.jpg"
+    },
+    {
+      "id": "0df9",
+      "nombre": "Placa de Clavicula",
+      "precio": "250",
+      "imagen": "https://acofor.com/42-thickbox_default/placa-de-clavicula-con-gancho.jpg"
+    },
+    {
+      "id": "0e8a",
+      "nombre": "Placa para Clavicula Bloqueada",
+      "precio": "260",
+      "imagen": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSUfT_StpWn_rb2v65yaqMp1LIGoftwDpv_8Q&s"
+    },
+    {
+      "id": "5833",
+      "nombre": "Placa de Clavicula Bloqueada Con Gancho",
+      "precio": "270",
+      "imagen": "https://imtra.com.mx/wp-content/uploads/2020/03/SF-609.01R.png"
+    },
+    {
+      "id": "575a",
+      "nombre": "Placa Bloqueada de clavicula 3.5mm",
+      "precio": "280",
+      "imagen": "https://ortozone.com/aysam/PLACA-BLOQUEADA-DE-CLAV%C3%8DCULA-35-MM.png"
+    },
+    {
+      "id": "6835",
+      "nombre": "Placa de humero Proximal",
+      "precio": "300",
+      "imagen": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSMXJkueD3z75teSha4YDJYuvp8b_wzVnWmgQ&s"
+    },
+    {
+      "id": "6b23",
+      "nombre": "Placa de humero proximal",
+      "precio": "350",
+      "imagen": "https://cirugiaavenida.com.ar/wp-content/uploads/2020/04/2735-y-2799-placa-para-humero-proximal-az-bloq-titanio.jpg"
+    },
+    {
+      "id": "4ff0",
+      "nombre": "Protesis Thompson",
+      "precio": "250",
+      "imagen": "data:image/jpeg;base64,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"
+    },
+    {
+      "id": "452a",
+      "nombre": "Protesis Thompson 38mm",
+      "precio": "270",
+      "imagen": "https://medzan.com.mx/wp-content/uploads/2021/03/TMTC-TLP38.SS_.jpg"
+    },
+    {
+      "id": "4ccd",
+      "nombre": "Tornillos Corticales diferentes mm",
+      "precio": "12",
+      "imagen": "src\\img\\imgproducts\\corticales.jpg"
     }
   ],
   "Contactanos": [

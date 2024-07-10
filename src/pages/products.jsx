@@ -83,7 +83,7 @@ const Products = () => {
         setFiltroProd(updatedProducts);
       }
     } catch (error) {
-      console.error('Error updating product:', error);
+      console.error('Error', error);
     }
   };
 
@@ -115,7 +115,7 @@ const Products = () => {
             placeholder="URL de la imagen"
             value={imagen}
             onChange={(e) => setImagen(e.target.value)}
-            className="custom-input" // Aplica estilos CSS a los inputs
+            className="custom-input" 
           />
         </Form.Group>
         <Button variant="primary" type="submit" className="custom-button">

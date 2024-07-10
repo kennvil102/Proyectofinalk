@@ -2,6 +2,8 @@
 import React, {useState} from "react"
 import { postData } from "../services/Fetch-LG-RG/FPost"
 import { useNavigate } from "react-router-dom";
+import { Button, Alert } from 'react-bootstrap';
+import 'bootstrap/dist/css/bootstrap.min.css';
 import "../css/Registro.css"
  
 const Register = () => {
@@ -37,7 +39,7 @@ const Register = () => {
       <p className="movertex">Introduzca un Email y una Contraseña para Registrarse</p> 
       <input type="text" value={email} placeholder="Email" onChange={(e)=>setEmail (e.target.value)}/>
       <input type="text" value={password} placeholder="Contraseña" onChange={(e)=>setPassword (e.target.value) } />
-      <button onClick={registro}>Registro</button>
+      <Button variant="primary"  onClick={registro}>Registro</Button>
       </div>
       </div>
     </div>

@@ -6,11 +6,12 @@ import Home from "../pages/Home";
 import Products from "../pages/Products";
 import Contact from "../pages/Contact";
 import AboutUs from "../pages/AboutUs";
+import Main from "../pages/Main";
 
 const Rutas = () => {
   return (
     <Routes>
-      <Route path="/" element={<Login />} />
+      <Route path="/" element={<Main />} />
       <Route path="/Login" element={<Login />} />
       <Route path="/Register" element={<Register />} />
       <Route path="/Home" element={<Home />} />

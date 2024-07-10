@@ -37,7 +37,7 @@ const Login = () => {
       const user = data.find((user) => user.email === email);
       if (user && user.password === password) {
         setAlert({ show: true, message: "Usuario autenticado", variant: 'success' });
-        setTimeout(() => navigate("/Home"), 2000); // Navegar después de 2 segundos
+        setTimeout(() => navigate("/Home"), 2000); //     
       } else {
         setAlert({ show: true, message: "Contraseña inválida", variant: 'danger' });
       }
