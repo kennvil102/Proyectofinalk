@@ -19,6 +19,6 @@ export const deleteProduct = async (id) => {
     return data;
   } catch (error) {
     console.error("Error deleting data:", error);
-    throw error; // Propagate the error for handling in the component
+    throw error;  
   }
 };

@@ -1,6 +1,8 @@
 import React from "react";
-import { Accordion, Card, useAccordionButton } from "react-bootstrap";
+import { Accordion, Card, Carousel, useAccordionButton } from "react-bootstrap";
+import CarruselVertical from "../components/CarruselVertical";
 import "../css/AboutUs.css";
+import "../css/CarruselVertical.css"
 import "bootstrap/dist/css/bootstrap.min.css";
 
  
@@ -20,6 +22,7 @@ const CustomToggle = ({ children, eventKey }) => {
 const AboutUs = () => {
   return (
     <div className="about-us-container">
+      <h2 className="stilito">SOBRE NOSOTROS</h2>
       <div className="accordion-wrapper" id="mission">
         <Accordion defaultActiveKey="0">
           <Card>
@@ -33,6 +36,7 @@ const AboutUs = () => {
             </Accordion.Collapse>
           </Card>
         </Accordion>
+        <CarruselVertical/>
       </div>
       <div className="accordion-wrapper" id="vision">
         <Accordion defaultActiveKey="1">
@@ -45,6 +49,7 @@ const AboutUs = () => {
             </Accordion.Collapse>
           </Card>
         </Accordion>
+        <CarruselVertical/>
       </div>
       <div className="accordion-wrapper" id="values">
         <Accordion defaultActiveKey="2">
@@ -60,6 +65,7 @@ const AboutUs = () => {
             </Accordion.Collapse>
           </Card>
         </Accordion>
+        <CarruselVertical/>
       </div>
  
 
