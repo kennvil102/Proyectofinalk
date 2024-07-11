@@ -1,4 +1,3 @@
-
 import { Link } from "react-router-dom";
 import Button from 'react-bootstrap/Button';
 import "../css/MainP.css"
@@ -7,14 +6,18 @@ import "../css/MainP.css"
 const MainP = () => {
   return (
     <div className="background">
-    <h1 className="borde">BIENVENIDOS A PLASMATECH</h1>
-    <h1 className="ola">BIENVENIDOS A PLASMATECH</h1>
-    <img src="src\img\logoplasma.jpeg" alt="" className="movtu"/>
-    <Link to="/Login">
-      <Button variant="light" className="buttonsito" size="lg">---Logeate o Registrate clickeando Aqui --- </Button>
-    </Link>
-  </div>
+      {/* Titulo principal */}
+      <h1 className="borde">bienvenidos a plasmatech</h1>
+      <h1 className="ola">bienvenidos a plasmatech</h1>
+      {/* Imagen de logo */}
+      <img src="src\img\logoplasma.jpeg" alt="" className="movtu"/>
+      {/* Boton de redireccionamiento a la página de Login */}
+      <Link to="/Login">
+        <Button variant="light" className="buttonsito" size="lg">---logeate o registrate Clickeando Aqui---</Button>
+      </Link>
+    </div>
   )
 }
 
-export default MainP
+export default MainP;
+

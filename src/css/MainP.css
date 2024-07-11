@@ -1,29 +1,34 @@
-body{
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+body {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; /* Estilos de fuente para todo el cuerpo */
 }
-*{
+
+* {
     margin: 0;
     padding: 0;
 }
-h1{
+
+h1 {
     font-size: 4rem;
     position: absolute;
     left: 620px;
     top: 120px;
+    /* Estilos para el encabezado principal */
 }
-.borde{
+
+.borde {
     color: black;
-    text-shadow: -1px -1px 0 white,
-                 1px -1px 0 white,
-                 1px 1px 0 white,
-                 -1px 1px 0 white;
+    text-shadow: -1px -1px 0 white, 1px -1px 0 white, 1px 1px 0 white, -1px 1px 0 white;
+    /* Estilos para texto con borde */
 }
-.ola{
+
+.ola {
     color: rgb(255, 255, 255);
     animation: ola 3s ease-in-out infinite;
+    /* Estilos para texto animado con gradiente */
 }
-@keyframes ola{
-    0% , 100%{
+
+@keyframes ola {
+    0%, 100% {
         clip-path: polygon(
             0% 47%,
             10% 48%,
@@ -36,7 +41,7 @@ h1{
             0% 100%
         );
     }
-    50%{
+    50% {
         clip-path: polygon(
             0% 60%,
             15% 65%,
@@ -49,19 +54,23 @@ h1{
             0% 100%
         );
     }
+    /* Animación keyframes para efecto de ola */
 }
-.buttonsito{
+
+.buttonsito {
     position: absolute;
     top: 650px;
     left: 750px;
     border: 1px solid rgb(239, 239, 239);
-    background-color:transparent;
+    background-color: transparent;
     color: white;
+    /* Estilos para botón */
 }
-.movtu{
+
+.movtu {
     margin-top: 259px;
     margin-left: 700px;
     width: 499px;
     border-radius: 12px;
+    /* Estilos para contenedor .movtu */
 }
- 

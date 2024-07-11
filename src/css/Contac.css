@@ -1,3 +1,4 @@
+/* Estilos globales para resetear márgenes, padding y establecer caja de borde */
 * {
   color: white;
   margin: 0;
@@ -5,21 +6,23 @@
   box-sizing: border-box;
 }
 
+/* Estilos para el contenedor de íconos ordenados */
 .ordicons {
   background-color: #0a1742;
   padding: 20px;
   border-radius: 10px;
-  
   text-align: center;
   display: flex;
   justify-content: space-around;
 }
 
+/* Estilos para texto animado */
 .textoAnimado {
   font-size: 1.5rem;
   margin-bottom: 10px;
 }
 
+/* Estilos para la lista de enlaces sociales */
 .social-links {
   list-style-type: none;
   padding: 0;
@@ -31,6 +34,7 @@
   right: 412px;
 }
 
+/* Estilos para cada ícono de redes sociales */
 .social-links li {
   width: 40px; /* Ancho de los íconos de redes sociales */
   height: 40px; /* Altura de los íconos de redes sociales */
@@ -54,12 +58,14 @@
   transform: scale(1.2); /* Aumentar la escala al hacer hover */
 }
 
+/* Estilos para mover texto */
 .movertesto {
   margin-top: 50px;
   display: flex;
   justify-content: center; 
 }
 
+/* Estilos para el contenedor de texto ordenado */
 .ordenartesto {
   background-color: #13091e;
   padding: 20px;
@@ -74,6 +80,7 @@
   margin-bottom: 20px; 
 }
 
+/* Estilos para el formulario de contacto */
 .contact-form {
   margin-top: 20px;
   max-width: 400px; 
@@ -89,6 +96,7 @@
   text-align: center;
 }
 
+/* Estilos para los elementos dentro del formulario */
 .form-container p {
   margin-bottom: 10px;
 }

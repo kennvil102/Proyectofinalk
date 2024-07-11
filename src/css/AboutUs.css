@@ -1,47 +1,57 @@
-*{
-    color: rgb(255, 255, 255);
+/* Estilos globales para todos los elementos */
+* {
+  color: rgb(255, 255, 255);
 }
+
+/* Estilos para el contenedor de la sección "About Us" */
 .about-us-container {
-    position: relative;
-    width: 100%;
-    height: 100vh;
-  }
-  
-  .accordion-wrapper {
-    position: absolute;
-    width: 300px;
-  }
-  
-  #mission {
-    top: 150px;
-    left: 50px;
-  }
-  
-  #vision {
-    top: 150px;
-    left: 550px;
-  }
-  
-  #values {
-    top: 150px;
-    left: 1150px;
-  }
-  
-  .accordion-toggle {
-    cursor: pointer;
-    padding: 10px;
-    background-color: #160426;
-    color: rgb(255, 255, 255);
-    border-radius: 5px;
-    margin: 5px 0;
-    text-align: center;
-  }
-  
-  .card-body {
-    background-color: #1f1062;
-  }
-  .stilito{
-    margin-top: 30px;
-    text-align: center;
-  }
- 
+  position: relative;
+  width: 100%;
+  height: 100vh;
+}
+
+/* Estilos para el contenedor del acordeón */
+.accordion-wrapper {
+  position: absolute;
+  width: 300px;
+}
+
+/* Estilos específicos para el panel de misión */
+#mission {
+  top: 150px;
+  left: 50px;
+}
+
+/* Estilos específicos para el panel de visión */
+#vision {
+  top: 150px;
+  left: 550px;
+}
+
+/* Estilos específicos para el panel de valores */
+#values {
+  top: 150px;
+  left: 1150px;
+}
+
+/* Estilos para los botones del acordeón */
+.accordion-toggle {
+  cursor: pointer;
+  padding: 10px;
+  background-color: #160426;
+  color: rgb(255, 255, 255);
+  border-radius: 5px;
+  margin: 5px 0;
+  text-align: center;
+}
+
+/* Estilos para el cuerpo de las tarjetas del acordeón */
+.card-body {
+  background-color: #1f1062;
+}
+
+/* Estilos para un contenedor con margen superior y texto centrado */
+.stilito {
+  margin-top: 30px;
+  text-align: center;
+}

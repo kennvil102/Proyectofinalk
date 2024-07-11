@@ -1,52 +1,44 @@
- 
-import React, {useState} from "react"
-import { postData } from "../services/Fetch-LG-RG/FPost"
-import { useNavigate } from "react-router-dom";
-import { Button, Alert } from 'react-bootstrap';
-import 'bootstrap/dist/css/bootstrap.min.css';
-import "../css/Registro.css"
- 
+import React, { useState } from "react";
+import { postData } from "../services/Fetch-LG-RG/FPost"; // Importa la función postData desde el servicio de registro
+import { useNavigate } from "react-router-dom"; // Importa el hook useNavigate desde react-router-dom
+import { Button } from 'react-bootstrap'; // Importa el componente Button de react-bootstrap
+import 'bootstrap/dist/css/bootstrap.min.css'; // Importa los estilos de bootstrap
+import "../css/Registro.css"; // Importa los estilos CSS personalizados
+
 const Register = () => {
-   
-  const [email,setEmail]= useState()
-  const [password,setPassword]=useState()
-  const navigate = useNavigate();
+  const [email, setEmail] = useState(""); // Estado para el email
+  const [password, setPassword] = useState(""); // Estado para la contraseña
+  const navigate = useNavigate(); // Obtiene la función de navegación de react-router-dom
 
-  function  registro() {
-    async function datos() { {/* si regis contiene los datos enviados con el posdata
-      luego con el if va validar los datos ya sea que se haya 
-      registrado con un email o password y con navigate se va redirigir
-      a la pagina principal*/}
-    let regis = await postData(email,password)
-    if (regis && regis.email && regis.password) {
-      alert("Usuario Registrado exitosamente")
-      navigate("/Login")
-      
-    }else{
-      alert("error no se registro")
+  function registro() {
+    async function datos() {
+      // Función asíncrona para enviar los datos de registro
+      let regis = await postData(email, password); // Llama a la función postData para registrar el usuario
+      if (regis && regis.email && regis.password) {
+        // Si el registro fue exitoso
+        alert("Usuario registrado exitosamente"); // Muestra una alerta de registro exitoso
+        navigate("/Login"); // Redirige a la página de inicio de sesión
+      } else {
+        alert("Error: no se pudo registrar"); // Muestra una alerta de error en el registro
+      }
     }
-    }
-    datos()
-  
-  
-    
+    datos(); // Llama a la función datos para iniciar el registro
   }
+
   return (
-    <div> {/* value valor del user onchange e evento del onchange, target seria todo el input */}
-    <div className="movereldi"> 
-    <div className="moverR">
-
-      <p className="movertex">Introduzca un Email y una Contraseña para Registrarse</p> 
-      <input type="text" value={email} placeholder="Email" onChange={(e)=>setEmail (e.target.value)}/>
-      <input type="password" value={password} placeholder="Contraseña" onChange={(e)=>setPassword (e.target.value) } />
-      <Button variant="primary"  onClick={registro}>Registro</Button>
+    <div>
+      <div className="movereldi">
+        <div className="moverR">
+          <p className="movertex">Introduzca un email y una contraseña para registrarse</p>
+          <input type="text" value={email} placeholder="Email" onChange={(e) => setEmail(e.target.value)} />
+          <input type="password" value={password} placeholder="Contraseña" onChange={(e) => setPassword(e.target.value)} />
+          <Button variant="primary" onClick={registro}>Registro</Button>
+        </div>
       </div>
-      </div>
-      <img src="src\img\esqueletoxd-removebg-preview.png" alt="esqueletoxd" className="movesq"/>
-      <img src="src\img\eskeletin.png" alt="esqueletoxd" className="movesq2"/>
+      <img src="src\img\esqueletoxd-removebg-preview.png" alt="esqueletoxd" className="movesq" />
+      <img src="src\img\eskeletin.png" alt="esqueletoxd" className="movesq2" />
     </div>
-     
-  )
-}
+  );
+};
 
-export default Register
+export default Register;

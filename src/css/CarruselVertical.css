@@ -1,27 +1,38 @@
-.carousel{
+/* Estilos para el contenedor del carousel */
+.carousel {
     display: flex;
     flex-direction: column;
     height: 100%;
 }
-.item{
+
+/* Estilos para cada ítem del carousel */
+.item {
     height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
     transition: transform 0.5s ease-in-out;
 }
-.item img{
+
+/* Estilos para imágenes dentro de los ítems del carousel */
+.item img {
     width: 100%;
     height: auto;
 }
-.control-prev, .control-next{
+
+/* Estilos para los controles de navegación previo y siguiente */
+.control-prev, .control-next {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
 }
-.control-prev{
+
+/* Estilos para el control de navegación previo */
+.control-prev {
     left: 0;
 }
-.control-next{
-    right:0;
+
+/* Estilos para el control de navegación siguiente */
+.control-next {
+    right: 0;
 }
