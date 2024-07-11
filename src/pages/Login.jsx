@@ -6,41 +6,43 @@ import { Button, Alert } from 'react-bootstrap'; // Importa componentes de botó
 import 'bootstrap/dist/css/bootstrap.min.css'; // Importa estilos CSS de Bootstrap
 import "../css/Logeo.css"; // Importa estilos CSS específicos para este componente
 
-const Login = () => {
-  const [data, setData] = useState([]); // Estado para almacenar los datos obtenidos del servidor
-  const [email, setEmail] = useState(""); // Estado para almacenar el valor del campo email
-  const [password, setPassword] = useState(""); // Estado para almacenar el valor del campo contraseña
-  const [alert, setAlert] = useState({ show: false, message: '', variant: '' }); // Estado para manejar la alerta
-  const navigate = useNavigate(); // Hook de React Router para la navegación
 
+/*Aqui la funcion login que maneja los estados data, el correo , la contraseña*/
+const Login = () => {
+  const [data, setData] = useState([]);  
+  const [email, setEmail] = useState("");  
+  const [password, setPassword] = useState(""); 
+  const [alert, setAlert] = useState({ show: false, message: '', variant: '' }); // Estado para manejar la alerta
+  const navigate = useNavigate(); // parte del react router para poder navegar hacia otra pagina
+  // el use effect que carga el componente una vez
   useEffect(() => {
-    // Efecto para obtener los datos del servidor al cargar el componente
+    //  aqui esta la funcion asincrona que por medio del await getData obtiene los datos
     async function fetchData() {
-      const datoss = await getData(); // Llama a la función getData para obtener los datos
-      setData(datoss); // Almacena los datos obtenidos en el estado 'data'
+      const datoss = await getData(); 
+      setData(datoss); // Almacena los datos obtenidos cambia el estado 'data'
     }
-    fetchData(); // Llama a la funcion fetchData al montar el componente
+    fetchData(); 
   }, []);
 
   function validar() {
     // Funcion para validar los campos de email y contraseña
     if (!email || email.trim() === "" || !password || password.trim() === "") {
       setAlert({ show: true, message: "Complete todos los campos!!!", variant: 'warning' });
-      return false; // Retorna falso si alguno de los campos está vacío o no válido
+      return false; 
     }
-    return true; // Retorna verdadero si ambos campos están completos
+    return true; // si los campos estan llenos por el usuario se sigue a la funcion iniciar sesion
   }
 
   function inicioSesion() {
-    // Funcion para iniciar sesion
-    if (!validar()) {
-      return; // Retorna si la validación de campos no es exitosa
+    // Funcion para iniciar sesision
+    if (!validar()) { // Aqui valida si los campos de email y contraseña que no esten vacios
+      return; //  
     }
-    if (data) {
-      const user = data.find((user) => user.email === email); // Busca al usuario con el email ingresado
+    if (data) { // aqui valida si data existe o tiene algun valor
+      const user = data.find((user) => user.email === email); //  aqui con el metodo find Busca al usuario con el email ingresado 
       if (user && user.password === password) { // Verifica si el usuario existe y la contraseña es correcta
         setAlert({ show: true, message: "Usuario autenticado", variant: 'success' });
-        setTimeout(() => navigate("/Home"), 2000); // Redirige a la página de inicio después de 2 segundos
+        setTimeout(() => navigate("/Home"), 2000); //un SetTimeout va ir hacia home luego de 2 segundos
       } else {
         setAlert({ show: true, message: "Contraseña inválida", variant: 'danger' });
       }
@@ -91,8 +93,10 @@ const Login = () => {
       <div className="esqueletomov">
         <img src="src\img\Skeleton-Blueprint-min.png" alt="" />
       </div>
-      <img src="src\img\AGC-544-removebg-preview.png" alt="" className="moving" />
+       
       <img src="src\img\AGC-546-removebg-preview.png" alt="" className="moving2" />
+      <img src="src\img\AGC-544-removebg-preview.png" alt="" className="moving" />
+      <img src="src\img\pied.png" alt="" className="moving3" />
     </div>
   );
 };

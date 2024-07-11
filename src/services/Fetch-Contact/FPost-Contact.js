@@ -8,9 +8,9 @@ export let postData = async (nombre, correo, mensaje) => {
         "Content-Type": "application/json" // tipo de contenido que se envia al servidor
       },
       body: JSON.stringify({
-        nombre: nombre, // nombre del remitente del formulario
-        correo: correo, // correo electronico del remitente
-        mensaje: mensaje // mensaje del remitente
+        nombre: nombre, 
+        correo: correo,  
+        mensaje: mensaje 
       })
     });
 
@@ -18,7 +18,7 @@ export let postData = async (nombre, correo, mensaje) => {
     const data = await response.json();
     return data; // devuelve los datos recibidos del servidor, incluyendo el id y los datos del formulario
   } catch (error) {
-    console.error('Error en la solicitud POST:', error); // captura y loguea cualquier error que ocurra durante la solicitud
-    return null; // devuelve null en caso de error para manejo de errores en el componente que llama a esta funcion
+    console.error('Error en la solicitud POST:', error);  
+    return null;  
   }
 };

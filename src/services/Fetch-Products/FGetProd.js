@@ -6,9 +6,9 @@ export const getData = async () => {
   try {
     // hace una peticion GET a la API con la URL para obtener los productos
     const response = await fetch(apiUrl, {
-      method: "GET", // metodo HTTP utilizado para leer datos
-      mode: "cors", // habilita el uso de CORS
-      credentials: "same-origin", // incluye credenciales en la peticion
+      method: "GET", // metodo HTTP utilizado para obtener los datos
+      mode: "cors", // 
+      credentials: "same-origin", //  
       headers: {
         "Content-Type": "application/json", // tipo de contenido que se recibe del servidor
       },
@@ -23,8 +23,8 @@ export const getData = async () => {
     const data = await response.json();
     return data; // devuelve los datos de los productos
   } catch (error) {
-    // maneja cualquier error que ocurra durante la peticion
+     
     console.error("Error fetching data:", error);
-    throw error; // propaga el error para ser manejado en el componente
+    throw error;  
   }
 };

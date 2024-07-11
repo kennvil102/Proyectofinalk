@@ -19,9 +19,9 @@ const Contact = () => {
 
   // Función asincrónica para enviar el formulario de contacto
   const enviarForm = async () => {
-    const result = await postData(nombre, correo, mensaje); // Llamada a la función de servicio para enviar datos
+    const result = await postData(nombre, correo, mensaje); // Llamada a la función de posData para enviar los datos nombre correo mensaje
     if (result && result.nombre && result.correo && result.mensaje) {
-      // Si el resultado tiene nombre, correo y mensaje
+      // Si el resultado contiene los datos nombre, correo y mensaje
       alert("Se envió el mensaje"); // Muestra un mensaje de éxito
     } else {
       alert("No se envió el mensaje"); // Muestra un mensaje de error
@@ -50,9 +50,9 @@ const Contact = () => {
           <h2>
             ESCRIBENOS <br />
             <br />
-            Si deseas consultar mayor Informacion Sobre Nuestros Productos o
-            tienes alguna duda al respecto, No dudes en Mandarnos un mensaje.
-            Uno de Nuestros asesores se pondra en contacto contigo.
+            Si desea hacer una consulta Y obtener mayor Informacion de Nuestros Productos no dude en 
+            Contactarnos, 
+            Nuestros asesores se pondran en contacto con usted a la brevedad posible.
           </h2>
         </div>
       </div>
@@ -67,18 +67,18 @@ const Contact = () => {
             type="text"
             value={nombre}
             placeholder="Nombre"
-            onChange={(e) => setNombre(e.target.value)} // Manejador de cambio para el nombre
+            onChange={(e) => setNombre(e.target.value)} // Captura los datos de nombre las celdas del form
           />
           <input
             type="email"
             value={correo}
             placeholder="Email"
-            onChange={(e) => setCorreo(e.target.value)} // Manejador de cambio para el correo
+            onChange={(e) => setCorreo(e.target.value)} // Captura los datos de correo las celdas del form
           />
           <textarea
             value={mensaje}
             placeholder="Mensaje"
-            onChange={(e) => setMensaje(e.target.value)} // Manejador de cambio para el mensaje
+            onChange={(e) => setMensaje(e.target.value)} // Captura los datos de mensaje las celdas del form
           />
           <button onClick={enviarForm}>Enviar</button> {/* Botón para enviar el formulario */}
         </div>

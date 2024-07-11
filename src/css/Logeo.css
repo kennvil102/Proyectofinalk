@@ -105,19 +105,27 @@ p {
   position: absolute;
   width: 200px;
   bottom: -120px;
-  left: -100px;
+  left: -160px;
 }
 
 /* Estilos para el elemento moving */
 .moving {
   position: absolute;
-  top: 460px;
-  right: 60px;
+  top: -20px;
+  left: 460px;
 }
 
 /* Estilos para el elemento moving2 */
 .moving2 {
   position: absolute;
-  top: 400px;
-  right: 60px;
+  top:30px;
+  right: 320px;
+  width: 400px;
+}
+.moving3{
+  position: absolute;
+  top: 20px;
+  right: -360px;
+  width:1100px;
+  height: 800px;
 }

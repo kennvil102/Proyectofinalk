@@ -4,52 +4,39 @@ import { postData } from "../services/Fetch-Products/FPostProd";
 import { updateProduct } from "../services/Fetch-Products/FPutProd";
 import { deleteProduct } from "../services/Fetch-Products/FDelProd";
 import { Button, Form } from "react-bootstrap";
-import Search from "../components/Search";
 import "../css/Products.css";
 
 const Products = () => {
-    // Estado para almacenar la lista completa de productos
+    // Estado para almacenar la lista completa de productos cambia el estado por el Usetate
     const [productos, setProductos] = useState([]);
     // Estados para manejar los valores del formulario de nuevo producto
     const [nombre, setNombre] = useState('');
     const [precio, setPrecio] = useState('');
     const [imagen, setImagen] = useState('');
-    // Estado para almacenar productos filtrados según la búsqueda
-    const [FiltroProd, setFiltroProd] = useState([]);
 
-    // Función useEffect para cargar los productos al montar el componente
+    // Funcion useEffect para cargar el componente
     useEffect(() => {
-        const fetchProductos = async () => {
+        const fetchProductos = async () => { 
             try {
-                const data = await getData();
-                setProductos(data);
-                setFiltroProd(data);
+                const data = await getData(); /* llama a getData obtiene los datos de los productos*/ 
+                setProductos(data); //Actualiza el estado 'productos' con los datos obtenidos
             } catch (error) {
-                console.error('Error fetching products:', error);
+                console.error('Error fetching products:', error); // si no da error
             }
         };
 
         fetchProductos();
     }, []);
 
-    // Función para manejar la búsqueda de productos por nombre
-    const handleSearch = (barraBusqueda) => {
-        const filtered = productos.filter(product =>
-            product.nombre.toLowerCase().includes(barraBusqueda.toLowerCase())
-        );
-        setFiltroProd(filtered);
-    };
-
-    // Función para manejar el envío del formulario de nuevo producto
+    // Maneja el envío del formulario de los productos //añade producto
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
-            const result = await postData(nombre, precio, imagen);
+            const result = await postData(nombre, precio, imagen); // por medio del posData envia los datos del nuevo productos
             if (result) {
                 // Actualizar la lista de productos con el nuevo producto
                 setProductos([...productos, result]);
-                setFiltroProd([...productos, result]);
-                // Limpiar los campos del formulario
+                //  Reseteamos o Limpiamos los campos del formulario con el producto nuevo
                 setNombre('');
                 setPrecio('');
                 setImagen('');
@@ -59,15 +46,14 @@ const Products = () => {
         }
     };
 
-    // Función para manejar la eliminación de un producto por su ID
+    // Función para  eliminar de un producto por su ID
     const handleDelete = async (id) => {
         try {
-            const result = await deleteProduct(id);
+            const result = await deleteProduct(id); //Llama a la función deleteProduct (fetch)para eliminar el producto del servidor
             if (result) {
-                // Filtrar los productos para excluir el producto eliminado
+                 //con el metodo filter filtra los productos y para excluir la lista de productos
                 const updatedProducts = productos.filter(prod => prod.id !== id);
-                setProductos(updatedProducts);
-                setFiltroProd(updatedProducts);
+                setProductos(updatedProducts);// actualiza el estado productos (SetProductos)
             }
         } catch (error) {
             console.error('Error', error);
@@ -78,10 +64,10 @@ const Products = () => {
     const handleUpdate = async (id, newName, newPrice, newImage) => {
         try {
             const result = await updateProduct(id, newName, newPrice, newImage);
-            if (result) {
+            if (result) { {/*si los datos existe o se actualiazron  se refleja el cambio en el producto*/}
                 // Actualizar la lista de productos con los datos actualizados
                 const updatedProducts = productos.map(prod => {
-                    if (prod.id === id) {
+                    if (prod.id === id) { // si el id es el mismo id que el producto entonces actualiza los datos
                         return {
                             ...prod,
                             nombre: newName,
@@ -91,8 +77,7 @@ const Products = () => {
                     }
                     return prod;
                 });
-                setProductos(updatedProducts);
-                setFiltroProd(updatedProducts);
+                setProductos(updatedProducts);// actualiza el estado de productos con el nuevo valor precio nombre etc
             }
         } catch (error) {
             console.error('Error', error);
@@ -102,10 +87,8 @@ const Products = () => {
     // Renderizado del componente Products
     return (
         <div>
-            {/* Componente de búsqueda de productos */}
-            <Search onSearch={handleSearch} />
-            
-            {/* Formulario para añadir nuevos productos */}
+            {/* Formulario para añadir nuevos productos  cuando se envie elform al dar click click anadir productos
+            se llama a la funcion handlesubmit*/}
             <Form onSubmit={handleSubmit}>
                 <Form.Group controlId="formNombre">
                     {/* Input para el nombre del producto */}
@@ -113,7 +96,7 @@ const Products = () => {
                         type="text"
                         placeholder="Nombre del producto"
                         value={nombre}
-                        onChange={(e) => setNombre(e.target.value)}
+                        onChange={(e) => setNombre(e.target.value)}//captura el estado de "nombre" mediante el evento onchange
                         className="custom-input"
                     />
                 </Form.Group>
@@ -145,16 +128,18 @@ const Products = () => {
             
             {/* Contenedor para mostrar la lista de productos */}
             <div className="productos-container">
-                {FiltroProd.map(prod => (
-                    <div key={prod.id} className="producto">
-                        <h2>{prod.nombre}</h2>
-                        <p>Precio: ${prod.precio}</p>
-                        <img src={prod.imagen} alt={prod.nombre} />
+                {productos.map(prod => (// aqui hace un mapeo itera sobre los productos
+                    <div key={prod.id} className="producto"> {/* aqui con el key prod.id identifica que productos han cambiado o se han eliminado*/}
+                        <h2>{prod.nombre}</h2> {/*muestra el nombre del producto actualizado*/}
+                        <p>Precio: ${prod.precio}</p> 
+                        <img src={prod.imagen} alt={prod.nombre} /> 
                         <div>
                             {/* Botón para eliminar un producto */}
-                            <Button variant="danger" onClick={() => handleDelete(prod.id)}>❌</Button>
+                            <Button variant="danger" onClick={() => handleDelete(prod.id)}>❌</Button> {/*elimina un producto mediante el boton X*/}
                             {/* Botón para actualizar un producto */}
                             <Button variant="info" onClick={() => handleUpdate(prod.id, prompt("Nuevo nombre:"), prompt("Nuevo precio:"), prod.imagen)}>🆙</Button>
+                             
+                            {/*Actualiza un producto mediante el boton up y mediante promp pide al usuario y se actualizan los datos*/}
                         </div>
                     </div>
                 ))}

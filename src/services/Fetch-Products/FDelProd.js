@@ -22,8 +22,8 @@ export const deleteProduct = async (id) => {
     const data = await response.json();
     return data; // devuelve los datos del producto eliminado
   } catch (error) {
-    // maneja cualquier error que ocurra durante la peticion
+     
     console.error("Error deleting data:", error);
-    throw error; // propaga el error para ser manejado en el componente
+    throw error;  
   }
 };

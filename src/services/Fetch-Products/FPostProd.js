@@ -6,15 +6,15 @@ export const postData = async (nombre, precio, imagen) => {
   try {
     // hace una peticion POST a la API con la URL para agregar un producto
     const response = await fetch(apiUrl, {
-      method: "POST", // metodo HTTP utilizado para crear datos
-      mode: "cors", // habilita el uso de CORS
+      method: "POST",   
+      mode: "cors",   
       headers: {
         "Content-Type": "application/json", // tipo de contenido que se envia al servidor
       },
       body: JSON.stringify({
-        nombre, // nombre del nuevo producto
-        precio, // precio del nuevo producto
-        imagen, // imagen del nuevo producto
+        nombre,  
+        precio,  
+        imagen, 
       }),
     });
 
@@ -27,8 +27,8 @@ export const postData = async (nombre, precio, imagen) => {
     const data = await response.json();
     return data; // devuelve los datos del nuevo producto
   } catch (error) {
-    // maneja cualquier error que ocurra durante la peticion
+    
     console.error("Error posting data:", error);
-    throw error; // propaga el error para ser manejado en el componente
+    throw error;  
   }
 };
