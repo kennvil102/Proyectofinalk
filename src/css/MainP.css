@@ -6,8 +6,10 @@ body{
     padding: 0;
 }
 h1{
-    font-size: 3rem;
+    font-size: 4rem;
     position: absolute;
+    left: 620px;
+    top: 120px;
 }
 .borde{
     color: black;
@@ -17,7 +19,7 @@ h1{
                  -1px 1px 0 white;
 }
 .ola{
-    color: rgb(255, 255, 251);
+    color: rgb(255, 255, 255);
     animation: ola 3s ease-in-out infinite;
 }
 @keyframes ola{
@@ -47,5 +49,19 @@ h1{
             0% 100%
         );
     }
+}
+.buttonsito{
+    position: absolute;
+    top: 650px;
+    left: 750px;
+    border: 1px solid rgb(239, 239, 239);
+    background-color:transparent;
+    color: white;
+}
+.movtu{
+    margin-top: 259px;
+    margin-left: 700px;
+    width: 499px;
+    border-radius: 12px;
 }
  

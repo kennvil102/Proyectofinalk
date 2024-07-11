@@ -100,6 +100,48 @@
     },
     {
       "id": "4003"
+    },
+    {
+      "id": "86a9"
+    },
+    {
+      "id": "cad4"
+    },
+    {
+      "id": "486a"
+    },
+    {
+      "id": "0343"
+    },
+    {
+      "id": "ca92"
+    },
+    {
+      "id": "c315"
+    },
+    {
+      "id": "9c04"
+    },
+    {
+      "id": "798d",
+      "email": "  "
+    },
+    {
+      "id": "a775",
+      "email": "  ",
+      "password": "   "
+    },
+    {
+      "id": "f115",
+      "email": "  ",
+      "password": "   "
+    },
+    {
+      "id": "871a",
+      "password": "123"
+    },
+    {
+      "id": "d351"
     }
   ],
   "productos": [
@@ -116,16 +158,16 @@
       "imagen": "src\\img\\imgproducts\\PlacaDistalTibia.jpg"
     },
     {
-      "nombre": "Placa tibia en t",
+      "nombre": "Placa Tibia en T",
       "precio": "300",
       "imagen": "https://es.indianorthopaedic.com/product-large-images-webp/Placa-fixLOCK-II-en-L-para-radio-distal-2.4mm-3-orificios-en-la-cabeza-izquierda-derecha-3011.webp",
       "id": "5337"
     },
     {
-      "id": "1e81",
-      "nombre": "Placa Radio Distal Volar",
-      "precio": "120",
-      "imagen": "https://www.eurociencia.com.ve/wp-content/uploads/2015/03/Periloc-Volar-distal-radio.jpg"
+      "nombre": null,
+      "precio": null,
+      "imagen": "https://www.eurociencia.com.ve/wp-content/uploads/2015/03/Periloc-Volar-distal-radio.jpg",
+      "id": "1e81"
     },
     {
       "id": "0eaa",
@@ -150,12 +192,6 @@
       "nombre": "Placa para Clavicula Bloqueada",
       "precio": "260",
       "imagen": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSUfT_StpWn_rb2v65yaqMp1LIGoftwDpv_8Q&s"
-    },
-    {
-      "id": "5833",
-      "nombre": "Placa de Clavicula Bloqueada Con Gancho",
-      "precio": "270",
-      "imagen": "https://imtra.com.mx/wp-content/uploads/2020/03/SF-609.01R.png"
     },
     {
       "id": "575a",
@@ -188,10 +224,10 @@
       "imagen": "https://medzan.com.mx/wp-content/uploads/2021/03/TMTC-TLP38.SS_.jpg"
     },
     {
-      "id": "4ccd",
-      "nombre": "Tornillos Corticales diferentes mm",
+      "nombre": "Tornillos Corticales Diferentes Medidas",
       "precio": "12",
-      "imagen": "src\\img\\imgproducts\\corticales.jpg"
+      "imagen": "src\\img\\imgproducts\\corticales.jpg",
+      "id": "4ccd"
     }
   ],
   "Contactanos": [

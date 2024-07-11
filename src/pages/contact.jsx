@@ -32,13 +32,13 @@ const Contact = () => {
       <div className="ordicons">
         <h2 className="textoAnimado">CONTACTO</h2>
         <span>
-          <FontAwesomeIcon icon={faMapMarkerAlt} /> Dirección: 153 Santa Ana   
+          <FontAwesomeIcon icon={faMapMarkerAlt} /> Dirección: Terrazas Santa Ana   
         </span>
         <span>
-          <FontAwesomeIcon icon={faWhatsapp} /> Celular: +506 633-452-22
+          <FontAwesomeIcon icon={faWhatsapp} /> Celular: +506 70742055
         </span>
         <span>
-          <FontAwesomeIcon icon={faEnvelope} /> Email: 1234@plasmatech.com
+          <FontAwesomeIcon icon={faEnvelope} /> Email: Info@plasmatech.com
         </span>
       </div>
       <div className="movertesto">
@@ -46,7 +46,7 @@ const Contact = () => {
           <h2>
            ESCRIBENOS <br />
             <br />
-            Si deseas consultar mayor Informacion Sobre Nuestros servicios o
+            Si deseas consultar mayor Informacion Sobre Nuestros Productos o
             tienes alguna duda al respecto, No dudes en Mandarnos un mensaje.
             Uno de Nuestros asesores se pondra en contacto contigo.
           </h2>

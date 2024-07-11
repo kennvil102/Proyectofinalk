@@ -38,10 +38,12 @@ const Register = () => {
 
       <p className="movertex">Introduzca un Email y una Contraseña para Registrarse</p> 
       <input type="text" value={email} placeholder="Email" onChange={(e)=>setEmail (e.target.value)}/>
-      <input type="text" value={password} placeholder="Contraseña" onChange={(e)=>setPassword (e.target.value) } />
+      <input type="password" value={password} placeholder="Contraseña" onChange={(e)=>setPassword (e.target.value) } />
       <Button variant="primary"  onClick={registro}>Registro</Button>
       </div>
       </div>
+      <img src="src\img\esqueletoxd-removebg-preview.png" alt="esqueletoxd" className="movesq"/>
+      <img src="src\img\eskeletin.png" alt="esqueletoxd" className="movesq2"/>
     </div>
      
   )

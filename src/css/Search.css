@@ -11,9 +11,9 @@
     padding: 10px;
     font-size: 16px;
     border: 1px solid #ffffff;
-    background-color:rgb(174, 170, 173);
+    background-color:rgb(23, 1, 18);
     border-radius: 4px;
-    margin-right: 52px; /* Espacio entre el input y el botón */
+    margin-right: 222px; /* Espacio entre el input y el botón */
     width: 200px; /* Ajusta el ancho según necesites */
     height: 48px;
 }

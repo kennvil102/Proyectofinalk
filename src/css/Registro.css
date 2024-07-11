@@ -23,3 +23,14 @@
     margin-right: -30px;
 
  }
+ .movesq{
+   position: absolute;
+   top: 100px;
+   right: 100px;
+   height: 640px;
+ }
+ .movesq2{
+   position: absolute;
+   top: 140px;
+   left: 120px;
+ }

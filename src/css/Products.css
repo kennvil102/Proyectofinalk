@@ -3,19 +3,17 @@
   margin-bottom: 10px;
   margin-left: 340px;
   padding: 8px;
-  background-color: rgb(158, 152, 166);;
+  background-color: rgb(158, 152, 166);
   border: 1px solid #28035b;
   border-radius: 4px;
   width: 50%;
   display: flex;
- 
 }
 
 /* Estilos para el botón */
 .custom-button {
   margin-top: 20px;
   margin-left: 630px;
-
   padding: 10px 20px;
   background-color: #58d619;
   color: #fff;
@@ -40,7 +38,7 @@
   margin-top: 20px;
   padding: 10px;
   border: 1px solid #000000;
-  background-color:rgb(15, 3, 68);
+  background-color: rgb(15, 3, 68);
   border-radius: 42px;
 }
 
@@ -55,7 +53,7 @@
 }
 
 .producto img {
-  width: 150px;;
+  width: 150px;
   height: 100px;
   border-radius: 20px;
   margin-bottom: 20px;

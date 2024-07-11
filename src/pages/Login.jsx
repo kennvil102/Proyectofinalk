@@ -79,6 +79,11 @@ const Login = () => {
           </Link>
         </div>
       </div>
+      <div className="esqueletomov">
+        <img src="src\img\Skeleton-Blueprint-min.png" alt="" />
+      </div>
+      <img src="src\img\AGC-544-removebg-preview.png" alt="" className="moving" />
+      <img src="src\img\AGC-546-removebg-preview.png" alt="" className="moving2" />
     </div>
   );
 };
