@@ -7,8 +7,8 @@ const MainP = () => {
   return (
     <div className="background">
       {/* Titulo principal */}
-      <h1 className="borde">bienvenidos a plasmatech</h1>
-      <h1 className="ola">bienvenidos a plasmatech</h1>
+      <h1 className="borde">Bienvenidos a plasmatech</h1>
+      <h1 className="ola">Bienvenidos a plasmatech</h1>
       {/* Imagen de logo */}
       <img src="src\img\logoplasma.jpeg" alt="" className="movtu"/>
       {/* Boton de redireccionamiento a la página de Login */}
