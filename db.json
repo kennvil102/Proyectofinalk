@@ -182,6 +182,11 @@
       "id": "49fc",
       "email": "222@gmail.com ",
       "password": "1234"
+    },
+    {
+      "id": "377e",
+      "email": "     adrian1@gmail.com ",
+      "password": "1234"
     }
   ],
   "productos": [
@@ -274,6 +279,12 @@
       "precio": "200",
       "imagen": "http://localhost:5173/src/img/imgproducts/PLACA-TIBIA-PROXIMAL-LATERAL-45-MM.jpg",
       "id": "b2b2"
+    },
+    {
+      "nombre": null,
+      "precio": null,
+      "imagen": "http://localhost:5174/src/img/imgproducts/PlacaDistalTibia.jpg",
+      "id": "b204"
     }
   ],
   "Contactanos": [
@@ -342,6 +353,18 @@
       "nombre": "kenneth",
       "correo": "12324@gmail.com",
       "mensaje": "Hola me interesa uno de sus productos"
+    },
+    {
+      "id": "c51d",
+      "nombre": "",
+      "correo": "",
+      "mensaje": ""
+    },
+    {
+      "id": "7447",
+      "nombre": "kenneth",
+      "correo": "1234896@gmail.com",
+      "mensaje": "HOLA 1234"
     }
   ]
 }

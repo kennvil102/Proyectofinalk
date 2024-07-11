@@ -116,7 +116,7 @@ const Products = () => {
                         type="text"
                         placeholder="URL de la imagen"
                         value={imagen}
-                        onChange={(e) => setImagen(e.target.value)}
+                        onChange={(e) => setImagen(e.target.value)} //captura la url la añade
                         className="custom-input"
                     />
                 </Form.Group>
